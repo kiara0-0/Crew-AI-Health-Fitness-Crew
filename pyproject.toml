@@ -1,0 +1,27 @@
+[tool.poetry]
+name="personalized-healthyfy-plan"
+version="0.1.0"
+description="An interactive customized diet and workout planner"
+authors=["Krina Sheth"]
+
+[tool.poetry.dependencies]
+python= ">=3.9,<4.0"
+crewai = "0.1.24"
+unstructured= '==0.10.25'
+pyowm= '3.3.0'
+python-dotenv="1.0.0"
+langchain=">=0.0.354,<0.0.355"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
